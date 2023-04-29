@@ -4,7 +4,6 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import CustomDrawer from "./navigation/CustomDrawer";
 import { useFonts } from "expo-font";
-import { StatusBar } from "expo-status-bar";
 
 const Stack = createStackNavigator();
 
@@ -20,12 +19,10 @@ const App = () => {
   if (!fontsLoaded) return null;
   return (
     <NavigationContainer>
-      <StatusBar animated={true} backgroundColor="transparent" />
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={CustomDrawer} />
       </Stack.Navigator>

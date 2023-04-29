@@ -94,7 +94,9 @@ const CustomDrawerContent = ({ navigation, ...props }) => {
             marginTop: SIZES.radius,
             alignItems: "center",
           }}
-          onPress={() => console.log("Profile")}
+          onPress={() => {
+            navigation.navigate("Profile");
+          }}
         >
           <Image
             source={dummyData.myProfile.profile_image}
@@ -134,11 +136,11 @@ const CustomDrawerContent = ({ navigation, ...props }) => {
               backgroundColor: COLORS.lightGray1,
             }}
           />
-          <CustomDrawerItem label="Track Your Order" icon={icons.location} />
+          {/* <CustomDrawerItem label="Track Your Order" icon={icons.location} />
           <CustomDrawerItem label="Coupuns" icon={icons.coupon} />
           <CustomDrawerItem label="Settings" icon={icons.setting} />
           <CustomDrawerItem label="Invite a Friend" icon={icons.profile} />
-          <CustomDrawerItem label="Help Center" icon={icons.help} />
+          <CustomDrawerItem label="Help Center" icon={icons.help} /> */}
         </View>
         <View style={{ marginBottom: SIZES.padding }}>
           <CustomDrawerItem label="Logout" icon={icons.logout} />
